@@ -7,6 +7,7 @@ all: paper.md paper.bib
 		--filter pandoc-tablenos \
 		--filter pandoc-fignos \
 		--filter pandoc-eqnos \
+		--csl=./styles/ieee.csl \
 		-M fignos-warning-level=0 \
 		--bibliography=paper.bib \
 		-s paper.md \
@@ -21,6 +22,7 @@ tex: paper.md paper.bib
 		--filter pandoc-tablenos \
 		--filter pandoc-fignos \
 		--filter pandoc-eqnos \
+		--csl=./styles/ieee.csl \
 		-M fignos-warning-level=0 \
 		--bibliography=paper.bib \
 		-s paper.md \
@@ -28,3 +30,5 @@ tex: paper.md paper.bib
 clean:
 	rm *.tex *.pdf
 
+# --template=templates/latex.template \
+# --csl=./styles/ieee.csl \
